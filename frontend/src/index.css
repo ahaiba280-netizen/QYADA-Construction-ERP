@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #061918;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B2421;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B78B2E;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Premium Card Style */
+.premium-card {
+  @apply bg-primary-card border border-gold-border rounded-3xl p-6 shadow-premium transition-all duration-300;
+}
+
+.premium-card:hover {
+  @apply shadow-glow border-gold-DEFAULT;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-primary-card border border-gold-border text-white px-6 py-3 rounded-2xl hover:bg-gold hover:text-black hover:shadow-glow transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-gold-border text-gold px-6 py-3 rounded-2xl hover:bg-gold hover:text-black transition-all duration-300;
+}
+
+/* KPI Card */
+.kpi-card {
+  @apply premium-card flex flex-col justify-between h-32;
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-gradient-to-r from-gold-DEFAULT to-yellow-300 bg-clip-text text-transparent;
+}
