@@ -1,0 +1,19 @@
+{
+  "name": "qyada-construction-erp",
+  "version": "1.0.0",
+  "description": "QYADA - Construction Enterprise Operating System",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace frontend dev\" \"yarn workspace backend dev\"",
+    "build": "yarn workspace frontend build && yarn workspace backend build",
+    "test": "yarn workspace frontend test && yarn workspace backend test",
+    "lint": "yarn workspace frontend lint && yarn workspace backend lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
